@@ -1,6 +1,6 @@
 # https://github.com/DavidAnson/markdownlint#rules--aliases
 
-# MD004 ul-style - Unordered list style
+# MD004 ul-style - Unordered heap style
 MD004: false
 
 # MD013 line-length - Line length
