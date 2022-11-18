@@ -2,7 +2,7 @@ package trie
 
 import (
 	"container/list"
-	"navigator/pkg/algorithm/heap"
+	"navigator/pkg/algorithm/priority/arry"
 )
 
 type IdentityPath[T any] struct {
@@ -22,7 +22,7 @@ func New[T any]() IdentityPath[T] {
 	return ret
 }
 
-func FromSorted[T any](sorted heap.Sorted[T]) IdentityPath[T] {
+func FromSorted[T any](sorted arry.SortedArrayList[T]) IdentityPath[T] {
 	var ret = IdentityPath[T]{}
 	ret.Init()
 	for sorted.Len() > 0 {
@@ -31,7 +31,7 @@ func FromSorted[T any](sorted heap.Sorted[T]) IdentityPath[T] {
 	return ret
 }
 
-//public  static <I> IdentityPath<I> of(List<I> ids){
+//public  static <I> IdentityPath<I> of(SortedArrayList<I> ids){
 //IdentityPath<I> path = new IdentityPath();
 //ids.stream().forEach(i -> path.append(i));
 //return path;

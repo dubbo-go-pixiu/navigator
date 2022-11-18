@@ -1,4 +1,4 @@
-package heap
+package arry
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ func TestExampleIntheap(t *testing.T) {
 	var compare = func(one int, other int) int {
 		return -(one - other)
 	}
-	h := Sorted[int]{}
+	h := SortedArrayList[int]{}
 	h.Init(compare, []int{34, 231, 4231, 0})
 
 	h.Push(8)
@@ -20,7 +20,7 @@ func TestExampleIntheap(t *testing.T) {
 	h.Push(3)
 	h.Push(2)
 	h.Push(8)
-	fmt.Printf("minimum: %d\n", h.array[0])
+	fmt.Printf("minimum: %d\n", h.Array[0])
 	for h.Len() > 0 {
 		fmt.Printf("%d ", h.Pop())
 	}

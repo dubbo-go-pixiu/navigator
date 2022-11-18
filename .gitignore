@@ -4,3 +4,5 @@ __pycache__
 pelican.auto.py
 site-generated/
 .authtokens
+/.idea/navigator.iml
+/.idea/modules.xml
